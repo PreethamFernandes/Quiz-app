@@ -11,19 +11,42 @@ let progressText = document.getElementById("progressText")
 let scoreText = document.getElementById("score")
 var progressBarFull = document.getElementById("progressBarFull")
 
-let questions = 
+let questions = [
+    {
+        "question": "Which tag in HTML is used to add a Paragraph",
+        "choice1": "p",
+        "choice2": "paragraph",
+        "choice3": "para",
+        "choice4": "p1",
+        "answer": 1
+    },
+    {
+        "question": "Which of the the following is a JavaScript Frontend Framework",
+        "choice1": "Bootstrap",
+        "choice2": "Express.js",
+        "choice3": "React.js",
+        "choice4": "Laravel",
+        "answer": 3
+    },
+    {
+        "question": "Which tag in used to add internal CSS in HTML",
+        "choice1": "CSS",
+        "choice2": "internal",
+        "choice3": "stylesheet",
+        "choice4": "style",
+        "answer": 4
+    },
+    {
+        "question": "Which of the following languages is used for Server Side Scripting",
+        "choice1": "C",
+        "choice2": "PHP",
+        "choice3": "Flutter",
+        "choice4": "CSS",
+        "answer": 2
+    }
 
-fetch("question.json").then(res => {
-    return res.json();
-})
-.then(loadedQuestions => {
-    console.log(loadedQuestions);
-    questions = loadedQuestions;
-    startGame();
-})
-.catch(err => {
-    console.log(err)
-})
+]
+
 
 const correctBonus = 10;
 const maxQuestions = 4;
